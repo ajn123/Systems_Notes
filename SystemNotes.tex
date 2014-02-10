@@ -44,6 +44,33 @@
 
 \documentclass[15pt,idxtotoc,hyperref,openany]{labbook} % 'openany' here removes the gap page between days, erase it to restore this gap; 'oneside' can also be added to remove the shift that odd pages have to the right for easier reading
 
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=C,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+
+
+
+
 \usepackage[ 
   backref=page,
   pdfpagelabels=true,
@@ -177,7 +204,32 @@ but will not be received until the signal is unblocked.
 
 \experiment{Pipelining}
 
-aaa
+Pipelining works by setting the standard output(1) of the first command to the standard input(0) of the second command in the pipeline.  
+here are a couple of system calls that you may be interested to understand what is happening in more detail, in particular, fork(2), 
+execve(2), pipe(2), dup2(2), read(2) and write(2).
+
+
+\experiment{Fork}
+
+This is an example of the fork method in C.  fork() clones a process from a process.  This new process can be used to execute another process or
+do other things.  NOTE:  Once you clone a process you have no idea which order your clones will run in, your code should not depend on the order.  Another thing to remember is that fork returns twice, once in the parent and once in the child (the new process you just created).  The cloned process is exactly the same except for the return value of fork().  In the child process fork will always return 0 and in the parent it will return the process ID of itself so your code can just check for the child process with == 0 and the parent with an else.
+\begin{lstlisting}
+#include <unistd.h>
+#include <stdio.h>
+
+int main(){
+int x = 1;
+	if (fork() == 0) 
+	{// only child executes this
+		printf("Child, x = %d\n", ++x);
+	} 
+	else {
+	// only parent executes this
+		printf("Parent, x = %d\n", --x);
+	}// parent and child execute this
+	printf("Exiting with x = %d\n", x);
+return 0;}
+\end{lstlisting}
 
 %----------------------------------------------------------------------------------------
 
