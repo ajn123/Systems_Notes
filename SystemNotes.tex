@@ -42,7 +42,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[idxtotoc,hyperref,openany]{labbook} % 'openany' here removes the gap page between days, erase it to restore this gap; 'oneside' can also be added to remove the shift that odd pages have to the right for easier reading
+\documentclass[15pt,idxtotoc,hyperref,openany]{labbook} % 'openany' here removes the gap page between days, erase it to restore this gap; 'oneside' can also be added to remove the shift that odd pages have to the right for easier reading
 
 \usepackage[ 
   backref=page,
@@ -116,27 +116,68 @@
 
 \labday{Chapter 8: Shell}
 
-\experiment{process}
-kkeuekuuekeouk
+\experiment{Process}
+The first thing to understand is that a {\bf computer program} is a passive collection of instructions; a {\bf process} is the actual execution of those instructions.\\
 
+A {\bf process} in user mode is not allowed to execute privileged instructions.  The only way for the process to change from user mode to kernel mode is via an exception such as an {\bf interrupt}, a {\bf fault} or a {\bf trapping system call}.
 
 %-----------------------------------------
 
-\experiment{example2} % Multiple experiments can be included in a single day, this allows you to segment what was done each day into separate categories
+\experiment{Context switching} % Multiple experiments can be included in a single day, this allows you to segment what was done each day into separate categories
+
+In computing, a {\bf context switch} is the process of storing and restoring the state (context) of a process so that execution can be resumed from the same point at a later time. This enables multiple processes to share a single CPU and is an essential feature of a multitasking operating system. What constitutes the context is determined by the processor and the operating system.\\
+
+A context switch follows these 3 steps:
+
+\begin{enumerate}
+\item   saves the contents of the current process.
+\item  restores the saved context of some previously preempted process
+\item  passes control to this newly restored process
+\end{enumerate}
+
+
+\experiment{File Descriptor}
+
+A file descriptor is an indicator for a way of accessing a file.
+
+
+\experiment{Signal}
+A {\bf signal} is a message that notifies a process that an event of some type has occured in the system (just like when you press a button on your phone, a message is sent to the operating system).  Each signal corresponds to some kind of system event.  For example, a signal can be used to cancel background jobs.\\
+
+
+
+\begin{table}[H]
+\begin{tabular}{l l l}
+\toprule
+\textbf{Integer Value} & \textbf{Name}  \\
+\toprule
+0 & Standard Input (Stdin)\\
+1 & Standard Output (Stdout) \\
+2 & Standard Error (Stderr) \\
+\bottomrule
+\end{tabular}
+\caption{Integer Values and their File descriptors}
+\label{tab:treatments_xy}
+\end{table}
+
+
+A pending signal is a signal that has been sent but not recieved.  A process can also block a CERTAIN signal.  In this case, blocked sigals can be sent
+but will not be received until the signal is unblocked.
+
 
 \begin{figure}[H] % Example of including images
 \begin{center}
-%\includegraphics[width=0.5\linewidth]{}
+\includegraphics[width=0.5\linewidth]{signals}
 \end{center}
-\caption{Example figure.}
+\caption{Table of possible signals}
 \label{fig:example_figure}
 \end{figure}
 
 %-----------------------------------------
 
-\experiment{example3}
+\experiment{Pipelining}
 
-\lipsum[3-5]
+aaa
 
 %----------------------------------------------------------------------------------------
 
