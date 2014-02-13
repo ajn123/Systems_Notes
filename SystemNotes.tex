@@ -303,9 +303,25 @@ experiment{P Threads- POSIX threads}
 \labday{Thread Pool}
 
 \experiment{Threads}
-threads share all the same date structures, processes DO NOT.\\
+A {\bf Thread} is a logical flow that runs in the context of the program.  Threads share all the same date structures (virtual address space), processes DO NOT.  It is also important to note that each thread has its own thread context including a unique integer thread ID (TID), stack,stack pointer, program counter, general purpose registers, and condition codes.\\
 
-When you have multiple processes
+threads  are scheduled automatically by the kernel and are known by an integer ID.\\
+Each process begins life as a single thread called the main thread.  At some point the main thread creates a peer thread, and from this point in time the two threads run concurrently.  Eventually ,control passes to the peer thread via a context switch , because the main thread is doing something slow (read, sleep, or disk access)\\
+
+Threads are organized in a pool of peers.  The main thread is different in that it is always the first thread to run in the process.  Each peer can read and write the same shared data.\\
+
+Variables in threaded C programs are mapped to virtual memory according to their storage classes:
+\begin{itemize}
+\item Global Variables (Shared):  A global variable is any variable declared outside of a function.  At run, the read/write area of virtual memory contains exactly one instance of each global variable that can be referenced by any thread.
+\item Local Automatic Variables (Not Shared): This is a variable declared inside a function WITHOUT the static attribute.  At run time, each thread's stack contains its own instances of any local automatic variables.
+\item Local Static Variables (Shared):  This is a variable declared inside a function with the static attribute.  As with global variables , the read/write area of virtual memory contains exactly one instance of each local static variable in our program.
+\end{itemize}
+
+\experiment{Semaphores}
+Semaphores provide a great way to ensure mutuaally exclusive access to shared variables.  A semaphore that is used to protect shared variables is called a binary semaphore becuase its value is always 0 or 1.\\
+
+Another important use of semaphores ,besides providing mutual exclusion, is to schedule accesses to shared rescources.
+
 
 
 \begin{table}[H]
