@@ -402,7 +402,20 @@ Here are some definitions to start:
 \end{itemize}
 
 \experiment{Protocol Layering}
-A {\bf  protocol } is a set of layers used to communicate with eachother.  Each instance of a protocol talks virtually to its peer using the protocol.  Each instance of a protocol uses only the servicese of a lower layer.
+A {\bf  protocol } is a set of layers used to communicate with eachother.  Each instance of a protocol talks virtually to its peer using the protocol.  Each instance of a protocol uses only the servicese of a lower layer.  Protocols must provide two things:
+\begin{itemize}
+\item Provides a naming scheme for host addresses, a unique address to identify itself.
+\item Provide a delivery mechanism called a packet which consists of a header and a payload.  Header contains size, source, and destination.  Payload contains bits sent from source.
+\end{itemize}
+
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=.8\linewidth]{encapsulation}
+\end{center}
+\caption{How protocol layering works}
+\label{fig:example_figure}
+\end{figure}
 
 
 \begin{table}[H]
