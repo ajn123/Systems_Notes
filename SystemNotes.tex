@@ -148,6 +148,15 @@ The first thing to understand is that a {\bf computer program} is a passive coll
 
 A {\bf process} in user mode is not allowed to execute privileged instructions.  The only way for the process to change from user mode to kernel mode is via an exception such as an {\bf interrupt}, a {\bf fault} or a {\bf trapping system call}.
 
+
+Processes can have three states:
+\begin{enumerate}
+\item  {\bf Running}  The process is currently running on a CPU.
+\item {\bf Ready} Process could make progress if CPU were available
+\item  {\bf Blocked} Process is waiting for something (memory, signal, time, etc)
+\end{enumerate}
+
+
 %-----------------------------------------
 
 \experiment{Context switching} % Multiple experiments can be included in a single day, this allows you to segment what was done each day into separate categories
@@ -170,20 +179,6 @@ A file descriptor is an indicator for a way of accessing a file.
 
 \experiment{Signal}
 A {\bf signal} is a message that notifies a process that an event of some type has occured in the system (just like when you press a button on your phone, a message is sent to the operating system).  Each signal corresponds to some kind of system event.  For example, a signal can be used to cancel background jobs.\\
-
-\begin{table}[H]
-\begin{tabular}{l l l}
-\toprule
-\textbf{Integer Value} & \textbf{Name}  \\
-\toprule
-0 & Standard Input (Stdin)\\
-1 & Standard Output (Stdout) \\
-2 & Standard Error (Stderr) \\
-\bottomrule
-\end{tabular}
-\caption{Integer Values and their File descriptors}
-\label{tab:treatments_xy}
-\end{table}
 
 
 A pending signal is a signal that has been sent but not recieved.  A process can also block a CERTAIN signal.  In this case, blocked sigals can be sent
@@ -209,6 +204,22 @@ execve(2), pipe(2), dup2(2), read(2) and write(2).
 \begin{itemize}
 \item The dup2 function takes two parameters $dup2(old, new)$  The pointer of old will replace the pointer of new when the function is called. (code example below)
 \end{itemize}
+
+
+\begin{table}[H]
+\begin{tabular}{l l l}
+\toprule
+\textbf{Integer Value} & \textbf{Name}  \\
+\toprule
+0 & Standard Input (Stdin)\\
+1 & Standard Output (Stdout) \\
+2 & Standard Error (Stderr) \\
+\bottomrule
+\end{tabular}
+\caption{Integer Values and their File descriptors}
+\label{tab:treatments_xy}
+\end{table}
+
 
  \newpage
 \begin{lstlisting}
@@ -281,22 +292,27 @@ int main(){
 \end{lstlisting}
 
 \experiment{reentrant}
+
+
 A computer program in {\bf reentrant} if it can be interrupted in the middle of its execution and then safely called again.  An interuption can come from a signal or a jump.  Once the reentered invocation completes, the previous invocations will resume correct execution.
 
 \begin{itemize}
 \item Printf() is a NON reentrant function, meaning that it is not safe to interrupt.
 \end{itemize}
 
+\experiment{Signal Handlers}
+Signal handlers are used to deal with the different types of signals on a USER LEVEL.\\
+
+When a handler function is invoked on a signal, that signal is automatically blocked (in addition to any other signals that are already in the process's signal mask) during the time the handler is running. \\
+
+
 
 
 \experiment{PID-process identifier}
 A number used to temporarily uniquely identify a process.\\
-One may use the command "ps j" to see PPID (parent process ID), PID (process ID), PGID (process group ID) and SID (session ID) of processes.   
+One may use the command "ps j" to see PPID (parent process ID), PID (process ID), PGID (process group ID) and SID (session ID) of processes.   \\
 
-
-experiment{P Threads- POSIX threads}
-
-
+Every process can have a PID, parent ID, and a group ID(gid).  A group ID means that all of the processes share the terminal together and you do not need to transfer control for these processes.  When you send a signal to a terminal, everything in the terminal control group (same gid) will receive that signal. When you send a signal via kill(), it depends on how you structure the arguments.
 
 %----------------------------------------------------------------------------------------
 
@@ -317,11 +333,76 @@ Variables in threaded C programs are mapped to virtual memory according to their
 \item Local Static Variables (Shared):  This is a variable declared inside a function with the static attribute.  As with global variables , the read/write area of virtual memory contains exactly one instance of each local static variable in our program.
 \end{itemize}
 
+
+\begin{lstlisting}
+#include <stdio.h>
+#include <pthread.h>
+
+#define NUMTHRDS 2
+
+pthread_t t [ NUMTHRDS];
+int coin_flip;
+
+pthread_mutex_t flip_done;
+static void *thread2(void *_){
+	pthread_mutex_lock(&flip_done);
+	printf("Thread 2: flipped coin %d\n", coin_flip);
+}
+
+
+static void * thread1(void * _)
+{
+	coin_flip = 1;
+	pthread_mutex_unlock(&flip_done);
+	printf("Thread 1: flipped coin %d\n", coin_flip);
+}
+int main()
+{
+	pthread_mutex_init(&flip_done, NULL);
+	pthread_mutex_lock(&flip_done);
+	pthread_create(&t[1], NULL, thread2, NULL);
+	pthread_create(&t[0], NULL, thread1, NULL);
+	 pthread_mutex_destroy(&flip_done);
+	//must have this as main will block until all the supported threads are done
+	pthread_exit(NULL);
+	return 1;
+}
+
+
+\end{lstlisting}
+
+
+\experiment{Race Conditions}
+One thing to watch out for in threads is a race condition.  A race condition occurs when two or more threads read and write a shared variable, and the final result depends on the execution of those threads.
+
 \experiment{Semaphores}
+A semaphore is a variable or abstract data type that is used for controlling access to multiple threads or processes
+
 Semaphores provide a great way to ensure mutuaally exclusive access to shared variables.  A semaphore that is used to protect shared variables is called a binary semaphore becuase its value is always 0 or 1.\\
 
-Another important use of semaphores ,besides providing mutual exclusion, is to schedule accesses to shared rescources.
+Another important use of semaphores ,besides providing mutual exclusion, is to schedule accesses to shared rescources.\\
 
+Think of semaphores as bouncers at a nightclub. There are a dedicated number of people that are allowed in the club at once. If the club is full no one is allowed to enter, but as soon as one person leaves another person might enter.
+
+
+
+\labday{Memory Allocation}
+
+\experiment{Start}
+
+
+
+\labday{Web Server}
+
+Here are some definitions to start:
+\begin{itemize}
+\item {\bf URI (Uniform Recsource Identifier}- The suffix of the corresponding URS that includes the filename and optional arguments.
+\item {\bf Network Port}- A number signaling what different type of traffic is sent over (email, internet, texts).  Ports talk to other devices as well as other networks through these ports.  
+\item {\bf Sockets}- Let the client and server talk over ports by providing an API that allows communication between the server and the client.  Sockets talk to applications.
+\end{itemize}
+
+\experiment{Protocol Layering}
+A {\bf  protocol } is a set of layers used to communicate with eachother.  Each instance of a protocol talks virtually to its peer using the protocol.  Each instance of a protocol uses only the servicese of a lower layer.
 
 
 \begin{table}[H]
