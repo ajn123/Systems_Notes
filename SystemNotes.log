@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 MAY 2014 12:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 MAY 2014 14:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -353,12 +353,9 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count118
 )
-(./SystemNotes.aux (./shell.aux) (./threads.aux) (./memoryAllocation.aux)
-(./internet.aux
-
-LaTeX Warning: Label `fig:example_figure' multiply defined.
-
-)
+(./SystemNotes.aux (./shell/shell.aux) (./threads/threads.aux)
+No file memoryAllocation.aux.
+No file internet.aux.
 
 LaTeX Warning: Label `tab:treatments_xy' multiply defined.
 
@@ -557,9 +554,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [4
 
 ]
-\openout2 = `shell.aux'.
+\openout2 = `./shell/shell.aux'.
 
- (./shell.tex
+ (./shell/shell.tex
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <15> not available
 (Font)              size <14.4> substituted on input line 7.
@@ -584,10 +581,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
-<signals.png, id=155, 779.91376pt x 318.18875pt>
-File: signals.png Graphic file (type png)
- <use signals.png>
-Package pdftex.def Info: signals.png used on input line 50.
+<./shell/signals.png, id=155, 779.91376pt x 318.18875pt>
+File: ./shell/signals.png Graphic file (type png)
+
+<use ./shell/signals.png>
+Package pdftex.def Info: ./shell/signals.png used on input line 50.
 (pdftex.def)             Requested size: 242.73761pt x 99.03075pt.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 65.
 
@@ -607,8 +605,9 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <15> not available
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.66 \end{itemize}
-                   <./signals.png>] [3pdfTeX warning (ext4): destination with t
-he same identifier (name{table.1.1}) has been already used, duplicate ignored
+                   <./shell/signals.png>] [3pdfTeX warning (ext4): destination 
+with the same identifier (name{table.1.1}) has been already used, duplicate ign
+ored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -656,9 +655,9 @@ bc-[]2 . 2 . 3 / html _ chapter / libc _
  []
 
 [6]) [7]
-\openout2 = `threads.aux'.
+\openout2 = `./threads/threads.aux'.
 
- (./threads.tex
+ (./threads/threads.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
@@ -691,16 +690,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--67
  []
 
 ) [10]
-\openout2 = `memoryAllocation.aux'.
+\openout2 = `./memory/memoryAllocation.aux'.
 
- (./memoryAllocation.tex) [11
+ (./memory/memoryAllocation.tex) [11
 
 
 
 ]
-\openout2 = `internet.aux'.
+\openout2 = `./internet/internet.aux'.
 
- (./internet.tex
+ (./internet/internet.tex
 <encapsulation.png, id=305, 877.2775pt x 601.24625pt>
 File: encapsulation.png Graphic file (type png)
  <use encapsulation.png>
@@ -719,40 +718,40 @@ Underfull \vbox (badness 2293) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.155 \include{internet}
-                         <./encapsulation.png>] [14
+l.137 \include{./internet/internet}
+                                    <./encapsulation.png>] [14
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}) h
 as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.176 \labday
+l.158 \labday
              {Saturday, 27 March 2010}] [15
 
 ]
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <31.11008> not available
-(Font)              size <24.88> substituted on input line 208.
+(Font)              size <24.88> substituted on input line 190.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <31.11008> not available
-(Font)              size <24.88> substituted on input line 208.
+(Font)              size <24.88> substituted on input line 190.
 
 [16
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--232
+Underfull \hbox (badness 10000) in paragraph at lines 202--214
 
  []
 
@@ -761,39 +760,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--232
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.244 \newpage
+l.226 \newpage
               ]
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--250
+Underfull \hbox (badness 10000) in paragraph at lines 230--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--250
+Underfull \hbox (badness 10000) in paragraph at lines 230--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--250
+Underfull \hbox (badness 10000) in paragraph at lines 230--232
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 259.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
 [18]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
- (./SystemNotes.aux (./shell.aux) (./threads.aux) (./memoryAllocation.aux)
-(./internet.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 259.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 259.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
+ (./SystemNotes.aux (./shell/shell.aux) (./threads/threads.aux)
+(./memory/memoryAllocation.aux) (./internet/internet.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 Package rerunfilecheck Info: File `SystemNotes.out' has not changed.
 (rerunfilecheck)             Checksum: 98537A8699C4FDDF8478081468D15B2E;1424.
 
@@ -804,16 +803,16 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 259.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
- 8656 strings out of 493315
- 132054 string characters out of 6137904
- 380812 words of memory out of 5000000
- 11840 multiletter control sequences out of 15000+600000
+ 8654 strings out of 493315
+ 132326 string characters out of 6137904
+ 379811 words of memory out of 5000000
+ 11838 multiletter control sequences out of 15000+600000
  9006 words of font info for 32 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,9n,54p,611b,1046s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,54p,619b,1046s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
@@ -823,7 +822,7 @@ local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/
 local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on SystemNotes.pdf (22 pages, 297965 bytes).
+Output written on SystemNotes.pdf (22 pages, 297969 bytes).
 PDF statistics:
  410 PDF objects out of 1000 (max. 8388607)
  369 compressed objects within 4 object streams
