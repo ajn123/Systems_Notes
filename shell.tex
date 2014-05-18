@@ -19,14 +19,14 @@ Processes can have three states:
 
 %-----------------------------------------
 
-\experiment{Context switching} % Multiple experiments can be included in a single day, this allows you to segment what was done each day into separate categories
+\experiment{Context switching} 
 
 In computing, a {\bf context switch} is the process of storing and restoring the state (context) of a process so that execution can be resumed from the same point at a later time. This enables multiple processes to share a single CPU and is an essential feature of a multitasking operating system. What constitutes the context is determined by the processor and the operating system.\\
 
 A context switch follows these 3 steps:
 
 \begin{enumerate}
-\item   saves the contents of the current process.
+\item  saves the contents of the current process.
 \item  restores the saved context of some previously preempted process
 \item  passes control to this newly restored process
 \end{enumerate}
@@ -34,7 +34,7 @@ A context switch follows these 3 steps:
 
 \experiment{File Descriptor}
 
-A file descriptor is an indicator for a way of accessing a file.
+A file descriptor is an indicator for a way of accessing a file.  In simple words, when you open a file, the operating system creates an entry to represent that file and store the information about that opened file.  Depending on the options you give, you can read and write to this file descriptor.
 
 
 \experiment{Signal}
@@ -127,9 +127,9 @@ execve(2), pipe(2), dup2(2), read(2) and write(2).
 \experiment{Fork}
 
 This is an example of the fork method in C.  fork() clones a process from a process.  This new process can be used to execute another process or
-do other things.  NOTE:  Once you clone a process you have no idea which order your clones will run in, your code should not depend on the order.  Another thing to remember is that fork returns twice, once in the parent and once in the child (the new process you just created).  The cloned process is exactly the same except for the return value of fork().  In the child process fork will always return 0 and in the parent it will return the process ID of itself so your code can just check for the child process with == 0 and the parent with an else.\\
+do other things.  NOTE:  Once you clone a process you have no idea which order your clones will run in, your code should not depend on the order.  Another thing to remember is that fork returns twice, once in the parent and once in the child (the new process you just created).  The cloned process is exactly the same except for the return value of fork().  In the child process fork will always return 0 and in the parent it will return the process ID of the child to the parent process.  Your code can just check for the child process with == 0 and the parent with an else.\\
 
-Fork returns the PROCESS ID OF ITS CHILD to the parent process, so that the parent knows its PID of the child to keep track of it.  Fork() returns 0 to the child, you don't need it.
+Fork returns the PROCESS ID OF ITS CHILD to the parent process, so that the parent knows its PID of the child to keep track of it.  Fork() returns 0 to the child, you don't need it except to check that you are processing the child.
 \begin{lstlisting}
 #include <unistd.h>
 #include <stdio.h>
@@ -153,7 +153,6 @@ int main(){
 
 \experiment{reentrant}
 
-
 A computer program in {\bf reentrant} if it can be interrupted in the middle of its execution and then safely called again.  An interuption can come from a signal or a jump.  Once the reentered invocation completes, the previous invocations will resume correct execution.
 
 \begin{itemize}
@@ -169,7 +168,19 @@ When a handler function is invoked on a signal, that signal is automatically blo
 
 
 \experiment{PID-process identifier}
-A number used to temporarily uniquely identify a process.\\
+A PID is a number used to temporarily uniquely identify a process.\\
 One may use the command "ps j" to see PPID (parent process ID), PID (process ID), PGID (process group ID) and SID (session ID) of processes.   \\
 
 Every process can have a PID, parent ID, and a group ID(gid).  A group ID means that all of the processes share the terminal together and you do not need to transfer control for these processes.  When you send a signal to a terminal, everything in the terminal control group (same gid) will receive that signal. When you send a signal via kill(), it depends on how you structure the arguments.
+
+
+\experiment{Resources}
+Below are other resources I would recommend looking at for further readings.
+
+\begin{enumerate}
+\item  \url{http://stackoverflow.com/}
+\item \url{ftp://ftp.gnu.org/old-gnu/Manuals/glibc-2.2.3/html_chapter/libc_toc.html#TOC572}, GNU documentation on job control.
+\item  passes control to this newly restored process
+\end{enumerate}
+
+

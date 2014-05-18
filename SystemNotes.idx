@@ -10,25 +10,27 @@
 \indexentry{Pipelining|)hyperpage}{5}
 \indexentry{Fork|(hyperpage}{5}
 \indexentry{Fork|)hyperpage}{5}
-\indexentry{reentrant|(hyperpage}{5}
+\indexentry{reentrant|(hyperpage}{6}
 \indexentry{reentrant|)hyperpage}{6}
 \indexentry{Signal Handlers|(hyperpage}{6}
 \indexentry{Signal Handlers|)hyperpage}{6}
 \indexentry{PID-process identifier|(hyperpage}{6}
-\indexentry{PID-process identifier|)hyperpage}{7}
-\indexentry{Threads|(hyperpage}{7}
-\indexentry{Threads|)hyperpage}{8}
-\indexentry{Race Conditions|(hyperpage}{9}
-\indexentry{Race Conditions|)hyperpage}{9}
-\indexentry{Semaphores|(hyperpage}{9}
-\indexentry{Semaphores|)hyperpage}{10}
-\indexentry{Start|(hyperpage}{10}
-\indexentry{Start|)hyperpage}{10}
-\indexentry{Protocol Layering|(hyperpage}{11}
-\indexentry{Protocol Layering|)hyperpage}{12}
-\indexentry{Bulleted list example|(hyperpage}{13}
-\indexentry{Bulleted list example|)hyperpage}{13}
-\indexentry{This is an example experiment|(hyperpage}{13}
-\indexentry{This is an example experiment|)hyperpage}{13}
-\indexentry{This is another example experiment|(hyperpage}{13}
-\indexentry{This is another example experiment|)hyperpage}{13}
+\indexentry{PID-process identifier|)hyperpage}{6}
+\indexentry{Resources|(hyperpage}{6}
+\indexentry{Resources|)hyperpage}{8}
+\indexentry{Threads|(hyperpage}{8}
+\indexentry{Threads|)hyperpage}{9}
+\indexentry{Race Conditions|(hyperpage}{10}
+\indexentry{Race Conditions|)hyperpage}{10}
+\indexentry{Semaphores|(hyperpage}{10}
+\indexentry{Semaphores|)hyperpage}{11}
+\indexentry{Start|(hyperpage}{11}
+\indexentry{Start|)hyperpage}{12}
+\indexentry{Protocol Layering|(hyperpage}{12}
+\indexentry{Protocol Layering|)hyperpage}{14}
+\indexentry{Bulleted list example|(hyperpage}{15}
+\indexentry{Bulleted list example|)hyperpage}{15}
+\indexentry{This is an example experiment|(hyperpage}{15}
+\indexentry{This is an example experiment|)hyperpage}{15}
+\indexentry{This is another example experiment|(hyperpage}{15}
+\indexentry{This is another example experiment|)hyperpage}{15}
