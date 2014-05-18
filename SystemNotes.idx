@@ -15,13 +15,13 @@
 \indexentry{Signal Handlers|(hyperpage}{6}
 \indexentry{Signal Handlers|)hyperpage}{6}
 \indexentry{PID-process identifier|(hyperpage}{6}
-\indexentry{PID-process identifier|)hyperpage}{6}
+\indexentry{PID-process identifier|)hyperpage}{7}
 \indexentry{Threads|(hyperpage}{7}
 \indexentry{Threads|)hyperpage}{8}
 \indexentry{Race Conditions|(hyperpage}{9}
 \indexentry{Race Conditions|)hyperpage}{9}
 \indexentry{Semaphores|(hyperpage}{9}
-\indexentry{Semaphores|)hyperpage}{9}
+\indexentry{Semaphores|)hyperpage}{10}
 \indexentry{Start|(hyperpage}{10}
 \indexentry{Start|)hyperpage}{10}
 \indexentry{Protocol Layering|(hyperpage}{11}
