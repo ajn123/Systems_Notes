@@ -4,13 +4,13 @@ Systems Notes
 These notes are of what I have learned about Computer Systems.  I plan to update this as my knowledge increases and release it when I feel it has the basics covered.  The plan is for these notes to cover four sections with as many helpful links and videos for aspiring students looking for help in this material.
 
 
-1. Processes
+###Processes
 
-2. Threads
+###Threads
 
-3. Memory 
+###Memory 
 
-4. Internet
+###Internet
 
 
 
