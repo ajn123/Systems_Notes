@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 MAY 2014 14:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  21 MAY 2014 00:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -354,8 +354,11 @@ Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count118
 )
 (./SystemNotes.aux (./shell/shell.aux) (./threads/threads.aux)
-No file memoryAllocation.aux.
-No file internet.aux.
+(./memory/memoryAllocation.aux) (./internet/internet.aux
+
+LaTeX Warning: Label `fig:example_figure' multiply defined.
+
+)
 
 LaTeX Warning: Label `tab:treatments_xy' multiply defined.
 
@@ -447,7 +450,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <21.60004> not available
 
 (Font)              size <20.74> substituted on input line 120.
 
-<./power.png, id=96, 513.92pt x 513.92pt>
+<./power.png, id=100, 513.92pt x 513.92pt>
 File: ./power.png Graphic file (type png)
  <use ./power.png>
 Package pdftex.def Info: ./power.png used on input line 120.
@@ -581,7 +584,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
-<./shell/signals.png, id=155, 779.91376pt x 318.18875pt>
+<./shell/signals.png, id=161, 779.91376pt x 318.18875pt>
 File: ./shell/signals.png Graphic file (type png)
 
 <use ./shell/signals.png>
@@ -680,46 +683,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+<threads/deadlock.png, id=301, 1024.82875pt x 532.99126pt>
+File: threads/deadlock.png Graphic file (type png)
+
+<use threads/deadlock.png>
+Package pdftex.def Info: threads/deadlock.png used on input line 68.
+(pdftex.def)             Requested size: 512.41312pt x 266.49498pt.
+
+Overfull \hbox (26.9379pt too wide) in paragraph at lines 68--69
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-) [10]
+[10 <./threads/deadlock.png>]) [11]
 \openout2 = `./memory/memoryAllocation.aux'.
 
- (./memory/memoryAllocation.tex) [11
+ (./memory/memoryAllocation.tex) [12
 
 
 
 ]
 \openout2 = `./internet/internet.aux'.
 
- (./internet/internet.tex
-<encapsulation.png, id=305, 877.2775pt x 601.24625pt>
+
+(./internet/internet.tex <encapsulation.png, id=315, 877.2775pt x 601.24625pt>
 File: encapsulation.png Graphic file (type png)
- <use encapsulation.png>
+
+<use encapsulation.png>
 Package pdftex.def Info: encapsulation.png used on input line 23.
 (pdftex.def)             Requested size: 388.38165pt x 266.18217pt.
 )
 Underfull \vbox (badness 2293) has occurred while \output is active []
 
- [12
+ [13
 
 
 
 ]
-[13pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+[14pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.137 \include{./internet/internet}
-                                    <./encapsulation.png>] [14
+                                    <./encapsulation.png>] [15
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}) h
 as been already used, duplicate ignored
@@ -727,7 +747,7 @@ as been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.158 \labday
-             {Saturday, 27 March 2010}] [15
+             {Saturday, 27 March 2010}] [16
 
 ]
 
@@ -738,7 +758,7 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <31.11008> not available
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <31.11008> not available
 (Font)              size <24.88> substituted on input line 190.
 
-[16
+[17
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 200--201
@@ -755,7 +775,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 202--214
 
  []
 
-[17pdfTeX warning (ext4): destination with the same identifier (name{table.6.1}
+[18pdfTeX warning (ext4): destination with the same identifier (name{table.6.1}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -787,14 +807,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 230--232
  []
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
-[18]
+[19]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
  (./SystemNotes.aux (./shell/shell.aux) (./threads/threads.aux)
 (./memory/memoryAllocation.aux) (./internet/internet.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 Package rerunfilecheck Info: File `SystemNotes.out' has not changed.
-(rerunfilecheck)             Checksum: 98537A8699C4FDDF8478081468D15B2E;1424.
+(rerunfilecheck)             Checksum: A6E3394F32AE56D694B42B12CDE11345;1496.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -806,10 +826,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
- 8654 strings out of 493315
- 132326 string characters out of 6137904
- 379811 words of memory out of 5000000
- 11838 multiletter control sequences out of 15000+600000
+ 8670 strings out of 493315
+ 132665 string characters out of 6137904
+ 380812 words of memory out of 5000000
+ 11846 multiletter control sequences out of 15000+600000
  9006 words of font info for 32 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,9n,54p,619b,1046s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -822,10 +842,10 @@ local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/
 local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on SystemNotes.pdf (22 pages, 297969 bytes).
+Output written on SystemNotes.pdf (23 pages, 349719 bytes).
 PDF statistics:
- 410 PDF objects out of 1000 (max. 8388607)
- 369 compressed objects within 4 object streams
- 159 named destinations out of 1000 (max. 500000)
- 200 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 420 PDF objects out of 1000 (max. 8388607)
+ 377 compressed objects within 4 object streams
+ 161 named destinations out of 1000 (max. 500000)
+ 213 words of extra memory for PDF output out of 10000 (max. 10000000)
 

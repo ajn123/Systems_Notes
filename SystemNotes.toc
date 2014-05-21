@@ -12,12 +12,13 @@
 \contentsline {chapter}{Thread Pool}{8}{chapter*.3}
 \contentsline {experiment}{\numberline {1}Threads}{8}{experiment.2.1}
 \contentsline {experiment}{\numberline {2}Race Conditions}{10}{experiment.2.2}
-\contentsline {experiment}{\numberline {3}Semaphores}{10}{experiment.2.3}
-\contentsline {chapter}{Memory Allocation}{11}{chapter*.4}
-\contentsline {experiment}{\numberline {1}Start}{11}{experiment.3.1}
-\contentsline {chapter}{Web Server}{12}{chapter*.5}
-\contentsline {experiment}{\numberline {1}Protocol Layering}{12}{experiment.4.1}
-\contentsline {chapter}{Saturday, 27 March 2010}{15}{chapter*.6}
-\contentsline {experiment}{\numberline {1}Bulleted list example}{15}{experiment.5.1}
-\contentsline {experiment}{\numberline {2}This is an example experiment}{15}{experiment.5.2}
-\contentsline {experiment}{\numberline {3}This is another example experiment}{15}{experiment.5.3}
+\contentsline {experiment}{\numberline {3}Deadlock and Livelock}{10}{experiment.2.3}
+\contentsline {experiment}{\numberline {4}Semaphores}{10}{experiment.2.4}
+\contentsline {chapter}{Memory Allocation}{12}{chapter*.4}
+\contentsline {experiment}{\numberline {1}Start}{12}{experiment.3.1}
+\contentsline {chapter}{Web Server}{13}{chapter*.5}
+\contentsline {experiment}{\numberline {1}Protocol Layering}{13}{experiment.4.1}
+\contentsline {chapter}{Saturday, 27 March 2010}{16}{chapter*.6}
+\contentsline {experiment}{\numberline {1}Bulleted list example}{16}{experiment.5.1}
+\contentsline {experiment}{\numberline {2}This is an example experiment}{16}{experiment.5.2}
+\contentsline {experiment}{\numberline {3}This is another example experiment}{16}{experiment.5.3}

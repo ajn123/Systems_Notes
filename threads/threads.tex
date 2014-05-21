@@ -4,8 +4,8 @@
 \experiment{Threads}
 A {\bf Thread} is a logical flow that runs in the context of the program.  Threads share all the same date structures (virtual address space), processes DO NOT.  It is also important to note that each thread has its own thread context including a unique integer thread ID (TID), stack,stack pointer, program counter, general purpose registers, and condition codes.\\
 
-threads  are scheduled automatically by the kernel and are known by an integer ID.\\
-Each process begins life as a single thread called the main thread.  At some point the main thread creates a peer thread, and from this point in time the two threads run concurrently.  Eventually ,control passes to the peer thread via a context switch , because the main thread is doing something slow (read, sleep, or disk access)\\
+Threads  are scheduled automatically by the kernel and are known by an integer ID.\\
+Each process begins life as a single thread called the main thread.  At some point the main thread creates a peer thread, and from this point in time the two threads run concurrently.  Eventually, control passes to the peer thread via a context switch, because the main thread is doing something slow (read, sleep, or disk access).\\
 
 Threads are organized in a pool of peers.  The main thread is different in that it is always the first thread to run in the process.  Each peer can read and write the same shared data.\\
 
@@ -57,6 +57,16 @@ int main()
 
 \experiment{Race Conditions}
 One thing to watch out for in threads is a race condition.  A race condition occurs when two or more threads read and write a shared variable, and the final result depends on the execution of those threads.
+
+
+\experiment{Deadlock and Livelock}
+Deadlocks can occur when two or more threads are each waiting for the other to finish, and thus neither gets done.  The picture below illustrates this point.  Imagine that one thread executes the code on the left (we will that thread X) and another thread executes the code on the right (Thread Y).  Now thread X executes and grabs the mutex A, while thread Y executes and grabs mutex B.  Thread X understands that it must wait for  mutex B to become available.  However thread Y is also waiting to obtain mutex A.  Both threads are waiting for another thread to give something up that it will not and we have a deadlock.
+
+
+
+\begin{center}
+    \includegraphics[scale=0.5]{threads/deadlock.png}
+\end{center}
 
 \experiment{Semaphores}
 A semaphore is a variable or abstract data type that is used for controlling access to multiple threads or processes
