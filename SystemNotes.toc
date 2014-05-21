@@ -11,9 +11,10 @@
 \contentsline {experiment}{\numberline {10}Resources}{6}{experiment.1.10}
 \contentsline {chapter}{Thread Pool}{8}{chapter*.3}
 \contentsline {experiment}{\numberline {1}Threads}{8}{experiment.2.1}
-\contentsline {experiment}{\numberline {2}Race Conditions}{10}{experiment.2.2}
-\contentsline {experiment}{\numberline {3}Deadlock and Livelock}{10}{experiment.2.3}
-\contentsline {experiment}{\numberline {4}Semaphores}{10}{experiment.2.4}
+\contentsline {experiment}{\numberline {2}Mutexes}{9}{experiment.2.2}
+\contentsline {experiment}{\numberline {3}Race Conditions}{10}{experiment.2.3}
+\contentsline {experiment}{\numberline {4}Deadlock and Livelock}{10}{experiment.2.4}
+\contentsline {experiment}{\numberline {5}Semaphores}{11}{experiment.2.5}
 \contentsline {chapter}{Memory Allocation}{12}{chapter*.4}
 \contentsline {experiment}{\numberline {1}Start}{12}{experiment.3.1}
 \contentsline {chapter}{Web Server}{13}{chapter*.5}

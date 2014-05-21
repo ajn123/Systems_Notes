@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  21 MAY 2014 00:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  21 MAY 2014 00:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -450,7 +450,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <21.60004> not available
 
 (Font)              size <20.74> substituted on input line 120.
 
-<./power.png, id=100, 513.92pt x 513.92pt>
+<./power.png, id=104, 513.92pt x 513.92pt>
 File: ./power.png Graphic file (type png)
  <use ./power.png>
 Package pdftex.def Info: ./power.png used on input line 120.
@@ -584,7 +584,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
-<./shell/signals.png, id=161, 779.91376pt x 318.18875pt>
+<./shell/signals.png, id=166, 779.91376pt x 318.18875pt>
 File: ./shell/signals.png Graphic file (type png)
 
 <use ./shell/signals.png>
@@ -680,35 +680,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-<threads/deadlock.png, id=301, 1024.82875pt x 532.99126pt>
+[9] <threads/deadlock.png, id=296, 1024.82875pt x 532.99126pt>
 File: threads/deadlock.png Graphic file (type png)
 
 <use threads/deadlock.png>
-Package pdftex.def Info: threads/deadlock.png used on input line 68.
+Package pdftex.def Info: threads/deadlock.png used on input line 74.
 (pdftex.def)             Requested size: 512.41312pt x 266.49498pt.
 
-Overfull \hbox (26.9379pt too wide) in paragraph at lines 68--69
+Overfull \hbox (26.9379pt too wide) in paragraph at lines 74--75
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
-[10 <./threads/deadlock.png>]) [11]
+) [11 <./threads/deadlock.png>]
 \openout2 = `./memory/memoryAllocation.aux'.
 
  (./memory/memoryAllocation.tex) [12
@@ -719,7 +719,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 \openout2 = `./internet/internet.aux'.
 
 
-(./internet/internet.tex <encapsulation.png, id=315, 877.2775pt x 601.24625pt>
+(./internet/internet.tex <encapsulation.png, id=323, 877.2775pt x 601.24625pt>
 File: encapsulation.png Graphic file (type png)
 
 <use encapsulation.png>
@@ -814,7 +814,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 Package rerunfilecheck Info: File `SystemNotes.out' has not changed.
-(rerunfilecheck)             Checksum: A6E3394F32AE56D694B42B12CDE11345;1496.
+(rerunfilecheck)             Checksum: CBA1F1A7C089DF5A82911AF61ABFEFC6;1554.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -826,13 +826,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
- 8670 strings out of 493315
- 132665 string characters out of 6137904
+ 8674 strings out of 493315
+ 132726 string characters out of 6137904
  380812 words of memory out of 5000000
- 11846 multiletter control sequences out of 15000+600000
+ 11849 multiletter control sequences out of 15000+600000
  9006 words of font info for 32 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,9n,54p,619b,1046s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,54p,823b,1693s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
@@ -842,10 +842,10 @@ local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/
 local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on SystemNotes.pdf (23 pages, 349719 bytes).
+Output written on SystemNotes.pdf (23 pages, 351330 bytes).
 PDF statistics:
- 420 PDF objects out of 1000 (max. 8388607)
- 377 compressed objects within 4 object streams
- 161 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 428 PDF objects out of 1000 (max. 8388607)
+ 385 compressed objects within 4 object streams
+ 162 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

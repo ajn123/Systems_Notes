@@ -20,11 +20,13 @@
 \indexentry{Resources|)hyperpage}{8}
 \indexentry{Threads|(hyperpage}{8}
 \indexentry{Threads|)hyperpage}{9}
+\indexentry{Mutexes|(hyperpage}{9}
+\indexentry{Mutexes|)hyperpage}{10}
 \indexentry{Race Conditions|(hyperpage}{10}
 \indexentry{Race Conditions|)hyperpage}{10}
 \indexentry{Deadlock and Livelock|(hyperpage}{10}
-\indexentry{Deadlock and Livelock|)hyperpage}{10}
-\indexentry{Semaphores|(hyperpage}{10}
+\indexentry{Deadlock and Livelock|)hyperpage}{11}
+\indexentry{Semaphores|(hyperpage}{11}
 \indexentry{Semaphores|)hyperpage}{12}
 \indexentry{Start|(hyperpage}{12}
 \indexentry{Start|)hyperpage}{13}
