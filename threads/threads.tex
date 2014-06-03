@@ -18,7 +18,7 @@ Variables in threaded C programs are mapped to virtual memory according to their
 
 
 \experiment{Mutexes}
-As shown above, threads share global and static variables of a process.  This leads to some problems.  What if one thread accesses a global variable, changes it and then another thread looks at the just updated same global variable.  Remember that your code should never be dependent on what order threads execute in.  That update result could change the flow of your program and visa versa if that same thread looks at a global variable before another threads updates its value.  This is where critical sections become important.\\
+As shown above, threads share global and static variables of a process.  This leads to some problems.  What if one thread accesses a global variable, changes it and then another thread looks at the just updated same global variable.  Remember that your code should never be dependent on what order threads execute in.  That update result could change the flow of your program and visa-versa if that same thread looks at a global variable before another threads updates its value.  This is where critical sections become important.\\
 
 Critical sections prevent data accesses that could cause problems such as the above example.  One way to solve this problem is through the use of mutexes \href{http://stackoverflow.com/questions/34524/what-is-a-mutex
 }{(Great stackoverflow explanation here)}.  Mutexes provide a way to synchronize your threads to make sure that accesses to shared data is successfully updated before any other thread is allowed to edit that shared data.  By surrounding your shared date with mutexes, you ensure that only one thread can deal with shared data at a time.  This wlll protect your code from undefined behavior.\\
@@ -82,8 +82,8 @@ A livelock is another kind of failure in which a non-blocked thread cannot make 
 
 
 \experiment{Semaphores}
-A semaphore is a variable or abstract data type that is used for controlling access to multiple threads or processes.  Semaphores provide a great way to ensure mutuaally exclusive access to shared variables.  A semaphore that is used to protect shared variables is called a binary semaphore becuase its value is always 0 or 1.\\
+A semaphore is a variable or abstract data type that is used for controlling access to multiple threads or processes.  Semaphores provide a great way to ensure mutually exclusive access to shared variables.  A semaphore that is used to protect shared variables is called a binary semaphore because its value is always 0 or 1.\\
 
-Another important use of semaphores, besides providing mutual exclusion, is to schedule accesses to shared rescources.\\
+Another important use of semaphores, besides providing mutual exclusion, is to schedule accesses to shared resources.\\
 
 Think of semaphores as bouncers at a nightclub. There are a dedicated number of people that are allowed in the club at once. If the club is full no one is allowed to enter, but as soon as one person leaves another person might enter.
